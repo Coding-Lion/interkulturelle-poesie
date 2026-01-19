@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Circular container for better visibility on all backgrounds -->
+  <circle cx="256" cy="256" r="240" fill="#1a1a1a" />
+  
+  <!-- Stylized Open Book -->
+  <path d="M140 360 C140 360 256 380 256 380 C256 380 372 360 372 360 M140 360 L140 180 C140 180 256 200 256 200 C256 200 372 180 372 180 L372 360" 
+        stroke="#f0f0f0" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Quill / Feather -->
+  <path d="M300 120 C350 70 420 70 420 70 C420 70 400 140 350 190 L260 280 L240 300 L260 280" 
+        fill="#eab308" />
+  <path d="M350 190 L256 284" stroke="#eab308" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- German-French subtle accent dots -->
+  <circle cx="200" cy="420" r="15" fill="#FFCE00" /> <!-- Gold (DE) -->
+  <circle cx="256" cy="420" r="15" fill="#D00000" /> <!-- Red (Shared colors) -->
+  <circle cx="312" cy="420" r="15" fill="#0055A4" /> <!-- Blue (FR) -->
+</svg>
