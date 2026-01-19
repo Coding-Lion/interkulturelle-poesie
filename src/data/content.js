@@ -122,8 +122,8 @@ export const content = {
                 organizer: "Organisation"
             },
             members: [
-                { name: "Charlotte Hattendorf", role: "Organisatorin & Übersetzerin", image: "/dt-fr-geschichtsband/pictures/charlotte_hattendorf.jpg" },
-                { name: "Christian Weiglein", role: "Organisator", image: "/dt-fr-geschichtsband/pictures/christian_weiglein.jpg" },
+                { name: "Charlotte Hattendorf", role: "Organisatorin & Übersetzerin", image: "/pictures/charlotte_hattendorf.jpg" },
+                { name: "Christian Weiglein", role: "Organisator", image: "/pictures/christian_weiglein.jpg" },
                 { name: "Aziliz Bourgès", role: "Autorin", image: null }
             ]
         },
@@ -253,8 +253,8 @@ export const content = {
                 organizer: "Organisateur"
             },
             members: [
-                { name: "Charlotte Hattendorf", role: "Organisatrice & Traductrice", image: "/dt-fr-geschichtsband/pictures/charlotte_hattendorf.jpg" },
-                { name: "Christian Weiglein", role: "Organisateur", image: "/dt-fr-geschichtsband/pictures/christian_weiglein.jpg" },
+                { name: "Charlotte Hattendorf", role: "Organisatrice & Traductrice", image: "/pictures/charlotte_hattendorf.jpg" },
+                { name: "Christian Weiglein", role: "Organisateur", image: "/pictures/christian_weiglein.jpg" },
                 { name: "Aziliz Bourgès", role: "Autrice", image: null }
             ]
         },
