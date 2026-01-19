@@ -77,8 +77,7 @@ export const content = {
                     { 
                         name: "Aziliz Bourgès", 
                         bio: "Lyriker*in und Kulturvermittler*in",
-                        website: "https://levoyageassis.wordpress.com/",
-                        image: null
+                        website: null
                     },
                     { 
                         name: "TBA", 
@@ -209,7 +208,7 @@ export const content = {
                     { 
                         name: "Aziliz Bourgès", 
                         bio: "Poète et médiatrice culturelle",
-                        website: "https://levoyageassis.wordpress.com/"
+                        website: null
                     },
                     { 
                         name: "À annoncer", 
