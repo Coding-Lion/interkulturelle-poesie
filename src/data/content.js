@@ -77,7 +77,7 @@ export const content = {
                     { 
                         name: "Aziliz Bourgès", 
                         bio: "Lyriker*in und Kulturvermittler*in",
-                        website: null
+                        website: "https://levoyageassis.wordpress.com"
                     },
                     { 
                         name: "TBA", 
@@ -123,7 +123,7 @@ export const content = {
             members: [
                 { name: "Charlotte Hattendorf", role: "Organisatorin & Übersetzerin", image: "/pictures/charlotte_hattendorf.jpg" },
                 { name: "Christian Weiglein", role: "Organisator", image: "/pictures/christian_weiglein.jpg" },
-                { name: "Aziliz Bourgès", role: "Autorin", image: null }
+                { name: "Aziliz Bourgès", role: "Autorin", image: "/pictures/aziliz_bourges.jpg" }
             ]
         },
         footer: {
@@ -208,7 +208,8 @@ export const content = {
                     { 
                         name: "Aziliz Bourgès", 
                         bio: "Poète et médiatrice culturelle",
-                        website: null
+                        website: "https://levoyageassis.wordpress.com"
+
                     },
                     { 
                         name: "À annoncer", 
@@ -254,7 +255,7 @@ export const content = {
             members: [
                 { name: "Charlotte Hattendorf", role: "Organisatrice & Traductrice", image: "/pictures/charlotte_hattendorf.jpg" },
                 { name: "Christian Weiglein", role: "Organisateur", image: "/pictures/christian_weiglein.jpg" },
-                { name: "Aziliz Bourgès", role: "Autrice", image: null }
+                { name: "Aziliz Bourgès", role: "Autrice", image: "/pictures/aziliz_bourges.jpg" }
             ]
         },
         footer: {
