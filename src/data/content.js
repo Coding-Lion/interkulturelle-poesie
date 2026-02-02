@@ -206,9 +206,7 @@ export const content = {
                 count: 3,
                 people: [
                     { 
-                        name: "Aziliz Bourgès", 
                         bio: "Poète et médiatrice culturelle",
-                        website: "https://levoyageassis.wordpress.com"
 
                     },
                     { 
@@ -228,9 +226,7 @@ export const content = {
                 count: "3+",
                 people: [
                     { 
-                        name: "Charlotte Hattendorf", 
                         bio: "Traducteur.ice et chef.fe de projet",
-                        website: null
                     },
                     { 
                         name: "À annoncer", 
@@ -253,9 +249,9 @@ export const content = {
                 organizer: "Organisateur"
             },
             members: [
-                { name: "Charlotte Hattendorf", role: "Organisatrice & Traductrice", image: "/pictures/charlotte_hattendorf.jpg" },
-                { name: "Christian Weiglein", role: "Organisateur", image: "/pictures/christian_weiglein.jpg" },
-                { name: "Aziliz Bourgès", role: "Autrice", image: "/pictures/aziliz_bourges.jpg" }
+                { role: "Organisatrice & Traductrice" },
+                { role: "Organisateur" },
+                { role: "Autrice" }
             ]
         },
         footer: {

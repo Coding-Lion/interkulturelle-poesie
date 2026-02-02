@@ -1,8 +1,37 @@
 import React, { useState } from 'react';
 import { Globe, BookOpen, Users, Mail, ChevronDown, CheckCircle2, Calendar, Sun, Moon, User, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { content } from './data/content';
+import { content as rawContent } from './data/content';
 import heroBg from './assets/hero_background.png';
+
+const mergeDeep = (target, source) => {
+  if (source === undefined) return target;
+  const isObject = (item) => (item && typeof item === 'object');
+
+  if (!isObject(target) || !isObject(source)) {
+    return source;
+  }
+
+  if (Array.isArray(target)) {
+    if (!Array.isArray(source)) return source;
+    return target.map((item, i) => mergeDeep(item, source[i]));
+  }
+
+  const output = Object.assign({}, target);
+  Object.keys(source).forEach(key => {
+    if (key in target) {
+      output[key] = mergeDeep(target[key], source[key]);
+    } else {
+      output[key] = source[key];
+    }
+  });
+  return output;
+};
+
+const content = {
+  de: rawContent.de,
+  fr: mergeDeep(rawContent.de, rawContent.fr)
+};
 
 const Navbar = ({ lang, setLang, theme, toggleTheme }) => {
   const t = content[lang].nav;
@@ -130,10 +159,10 @@ const About = ({ lang }) => {
 
 const Contributors = ({ lang }) => {
   const t = content[lang].contributors;
-  
+
   const PersonCard = ({ person, index }) => {
     const isTBA = person.name === "TBA" || person.name === "À annoncer";
-    
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -142,8 +171,8 @@ const Contributors = ({ lang }) => {
         transition={{ delay: index * 0.05 }}
         className={`
           p-3 rounded-lg border transition-all duration-300
-          ${isTBA 
-            ? 'bg-bg-primary/20 border-border-subtle/30 opacity-50' 
+          ${isTBA
+            ? 'bg-bg-primary/20 border-border-subtle/30 opacity-50'
             : 'bg-glass border-border-subtle hover:border-brand-gold/40'
           }
         `}
@@ -155,9 +184,9 @@ const Contributors = ({ lang }) => {
           {person.bio}
         </p>
         {person.website && (
-          <a 
-            href={person.website} 
-            target="_blank" 
+          <a
+            href={person.website}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-brand-blue hover:text-brand-gold text-xs mt-2 transition-colors"
           >
@@ -336,8 +365,8 @@ const Team = ({ lang }) => {
             >
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-bg-secondary">
                 {member.image ? (
-                  <img 
-                    src={member.image} 
+                  <img
+                    src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
@@ -379,7 +408,10 @@ const Footer = ({ lang }) => {
 };
 
 function App() {
-  const [lang, setLang] = useState('de');
+  const [lang, setLang] = useState(() => {
+    const browserLang = navigator.language || navigator.userLanguage;
+    return browserLang?.toLowerCase().startsWith('fr') ? 'fr' : 'de';
+  });
   // Initialize from system preference
   const [theme, setTheme] = useState(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
